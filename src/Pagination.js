@@ -2,13 +2,21 @@ import * as React from 'react';
 
 export const Pagination = ({ data, itemsForEachPage }) => {
   const [paginatedData, setPaginatedData] = React.useState(data);
+  const [currentPageData, setCurrentPageData] = React.useState([]);
   const [page, setPage] = React.useState(1);
   const [totalPage, setTotalPage] = React.useState(0);
+  // const [noOfDataLines, setNoOfDataLines] = React.useState(items/Page);
 
-  console.log('currentPageData ***********', totalPage);
+  console.log(
+    'currentPageData ***********',
+    totalPage,
+    currentPageData
+    // noOfDataLines
+  );
 
   React.useEffect(() => {
-    setTotalPage(Math.ceil(paginatedData.length / itemsForEachPage));
+    setCurrentPageData(paginatedData.slice(0, 5));
+    setTotalPage(Math.ceil(paginatedData.length / 5));
   }, [paginatedData]);
 
   const handleNextClick = () => {
@@ -22,7 +30,7 @@ export const Pagination = ({ data, itemsForEachPage }) => {
 
   const handlePrevClick = () => {
     // setNoOfDataLines(noOfDataLines - 5);
-    setPage(page - 1);
+    // setPage(page - 1);
     // setCurrentPageData(paginatedData.slice(noOfDataLines - 5, noOfDataLines));
   };
 
