@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
-      <Pagination data={rawData} noOfLines={5} />
+      <Pagination data={rawData} itemsForEachPage={5} />
     </div>
   );
 }

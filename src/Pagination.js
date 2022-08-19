@@ -1,38 +1,46 @@
 import * as React from 'react';
 
-export const Pagination = ({ data, noOfLines }) => {
+export const Pagination = ({ data, itemsForEachPage }) => {
   const [paginatedData, setPaginatedData] = React.useState(data);
-  const [currentPageData, setCurrentPageData] = React.useState([]);
   const [page, setPage] = React.useState(1);
   const [totalPage, setTotalPage] = React.useState(0);
-  const [noOfDataLines, setNoOfDataLines] = React.useState(noOfLines);
 
-  console.log(
-    'currentPageData ***********',
-    totalPage,
-    currentPageData,
-    noOfDataLines
-  );
+  console.log('currentPageData ***********', totalPage);
 
   React.useEffect(() => {
-    setCurrentPageData(paginatedData.slice(0, 5));
-    setTotalPage(Math.ceil(paginatedData.length / 5));
+    setTotalPage(Math.ceil(paginatedData.length / itemsForEachPage));
   }, [paginatedData]);
 
   const handleNextClick = () => {
-    console.log('clicked next');
-    setNoOfDataLines(noOfDataLines + 5);
+    // console.log('clicked next');
+    // // setNoOfDataLines(noOfDataLines + 5);
     setPage(page + 1);
-    setCurrentPageData(
-      paginatedData.slice(0 + noOfDataLines, 5 + noOfDataLines)
-    );
+    // setCurrentPageData(
+    //   // paginatedData.slice(0 + noOfDataLines, 5 + noOfDataLines)
+    // );
   };
 
   const handlePrevClick = () => {
-    setNoOfDataLines(noOfDataLines - 5);
+    // setNoOfDataLines(noOfDataLines - 5);
     setPage(page - 1);
     // setCurrentPageData(paginatedData.slice(noOfDataLines - 5, noOfDataLines));
   };
+
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const [itemsPerPage, setItemsPerPage] = React.useState(itemsForEachPage);
+
+  const pages = [];
+  for (
+    let i = 0;
+    i <= Math.ceil(paginatedData.length / itemsForEachPage);
+    i++
+  ) {
+    pages.push(i);
+  }
+
+  let indexOfLastItem = currentPage * itemsPerPage;
+  let indexOfFirstItem = indexOfLastItem - itemsForEachPage;
+  const currentItems = paginatedData.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
@@ -41,13 +49,13 @@ export const Pagination = ({ data, noOfLines }) => {
         <h3>Total pages: {totalPage}</h3>
       </div>
       <div>
-        {currentPageData.map((item, index) => {
+        {currentItems.map((item, index) => {
           return (
             <div key={index}>
               <ul>
                 <li>{item.name}</li>
               </ul>
-              {currentPageData.length - 1 === index && (
+              {currentItems.length - 1 === index && (
                 <>
                   <button disabled={page === 1} onClick={handlePrevClick}>
                     previous
