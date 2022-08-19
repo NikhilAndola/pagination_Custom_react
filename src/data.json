@@ -1,0 +1,140 @@
+[
+  {
+    "name": "nikhil",
+    "city": "haldwani",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "andrew",
+    "city": "usa",
+    "age": 28,
+    "married": true
+  },
+  {
+    "name": "Jogeshwar",
+    "city": "mohali",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "dev",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "shubam",
+    "city": "jammu",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "parikshit",
+    "city": "new chandigarh",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "babua",
+    "city": "bihar",
+    "age": 25,
+    "married": false
+  },
+  {
+    "name": "mango",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "banana",
+    "city": "nainital",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "orange",
+    "city": "usa",
+    "age": 28,
+    "married": true
+  },
+  {
+    "name": "watermelon",
+    "city": "mohali",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "papaya",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "andrew",
+    "city": "usa",
+    "age": 28,
+    "married": true
+  },
+  {
+    "name": "Jogeshwar",
+    "city": "mohali",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "dev",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "shubam",
+    "city": "jammu",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "parikshit",
+    "city": "new chandigarh",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "babua",
+    "city": "bihar",
+    "age": 25,
+    "married": false
+  },
+  {
+    "name": "mango",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "banana",
+    "city": "nainital",
+    "age": 26,
+    "married": false
+  },
+  {
+    "name": "orange",
+    "city": "usa",
+    "age": 28,
+    "married": true
+  },
+  {
+    "name": "watermelon",
+    "city": "mohali",
+    "age": 23,
+    "married": false
+  },
+  {
+    "name": "papaya",
+    "city": "dharamshala",
+    "age": 26,
+    "married": false
+  }
+]
